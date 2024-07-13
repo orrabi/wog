@@ -1,6 +1,6 @@
-from guess_game import play as play_guess_game
-from memory_game import play as play_memory_game
-from currency_roulette_game import play as play_currency_game
+from games.guess_game import play as play_guess_game
+from games.memory_game import play as play_memory_game
+from games.currency_roulette_game import play as play_currency_game
 from utils import screen_cleaner
 from score import add_score
 def welcome():
@@ -37,7 +37,6 @@ def start_play():
     elif game_chosen == 3:
         is_winner = play_currency_game(difficulty_level)
 
-    print(f'did You win?? {is_winner}')
     if is_winner:
         add_score(difficulty_level)
 
